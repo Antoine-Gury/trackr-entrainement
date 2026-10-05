@@ -1,8 +1,8 @@
 import type { Colis } from '../types'
 
-/** Normalise une saisie : espaces retirés, majuscules (« fr 123 » -> « FR123 »). */
+/** Normalise une saisie : espaces autour retirés, majuscules (« fr123 » -> « FR123 »). */
 export function normaliserNumero(saisie: string): string {
-  return saisie.replace(/\s+/g, '').toUpperCase()
+  return saisie.trim().toUpperCase()
 }
 
 /** Colis dont le numéro de suivi contient la saisie. Saisie vide : tous les colis. */
